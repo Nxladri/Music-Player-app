@@ -1,12 +1,30 @@
-# React + Vite
+# 🎵 Music Player App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React-based music player built with **Vite**.  
+It allows you to play songs, view artist details, and enjoy a clean, modern UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🎧 Play and pause songs  
+- 🖼️ Display artist image, song name, and artist name  
+- ⚡ Built with **React + Vite** for fast performance  
+- 🎨 Clean and responsive UI  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React** (UI library)  
+- **Vite** (build tool)  
+- **JavaScript (ES6+)**  
+- **CSS / Tailwind** (for styling, if used)  
+
+---
+
+## 📂 Project Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/Music-Player-app.git
+cd Music-Player-app
