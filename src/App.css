@@ -1,0 +1,266 @@
+/* General body styling */
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient background */
+  color: #e0e0e0; /* Light text color for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+}
+
+/* Header styling */
+.header {
+  background: linear-gradient(90deg, #0f0c29, #24243e); /* Darker, more sophisticated gradient */
+  color: #ffffff;
+  padding: 20px 30px;
+  font-size: 28px;
+  font-weight: 700; /* Bolder font weight */
+  width: 100%; /* Full width */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Softer shadow */
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+.header h1 {
+  margin: 0;
+  letter-spacing: 1px; /* Slight letter spacing for elegance */
+}
+
+/* Main content area for input and player */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1; /* Allow this section to take up available space */
+  padding: 20px;
+}
+
+/* Input container for search */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; /* Adjusted margin */
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1); /* Subtle background for input area */
+  padding: 15px 25px;
+  border-radius: 30px; /* More rounded */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-box {
+  width: 350px; /* Slightly wider input */
+  height: 50px; /* Taller input */
+  border-radius: 25px; /* Fully rounded */
+  border: none; /* Remove default border */
+  padding: 0 20px; /* More padding */
+  font-size: 18px; /* Larger font */
+  outline: none; /* Remove outline on focus */
+  background-color: #ffffff; /* White input background */
+  color: #333; /* Dark text in input */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+}
+
+.input-box::placeholder {
+  color: #aaa; /* Lighter placeholder text */
+}
+
+/* Search button styling */
+.btn-info {
+  border-radius: 25px; /* Fully rounded */
+  padding: 12px 25px; /* Adjusted padding */
+  background-color: #1db954; /* Spotify green */
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-info:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Player card styling */
+.card.text-center {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(15px); /* More pronounced blur */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px; /* Increased padding */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), /* Stronger shadow */
+              inset 0 0 15px rgba(255, 255, 255, 0.1); /* Inner glow */
+  animation: popIn 0.6s ease-out forwards; /* Animation */
+  width: 550px; /* Adjusted width */
+  height: 550px; /* Adjusted height */
+  max-width: 90%; /* Responsive width */
+  max-height: 90vw; /* Responsive height */
+  margin-top: 20px; /* Space from input */
+}
+
+@keyframes popIn {
+  from { transform: scale(0.85) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.card-title {
+  font-size: 22px; /* Larger title font */
+  font-weight: bold;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  max-width: 80%; /* Ensure text wraps */
+  text-align: center;
+  color: #1db954; /* Green for artist */
+}
+
+.card-text {
+  font-size: 18px; /* Larger text font */
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  max-width: 80%;
+  text-align: center;
+  color: #eaeaea; /* Lighter text */
+}
+
+.card-content img {
+  border-radius: 50%; /* Circular image */
+  width: 120px; /* Larger image */
+  height: 120px;
+  margin-bottom: 25px;
+  border: 4px solid #1db954; /* Green border */
+  box-shadow: 0 0 15px rgba(29, 185, 84, 0.5); /* Green glow */
+}
+
+.card-content iframe {
+  width: 100%; /* Responsive iframe */
+  height: 350px; /* Adjusted height for iframe */
+  border-radius: 20px; /* Rounded corners for iframe */
+  border: none; /* Remove iframe border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* History Drawer Styling */
+.history-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px; /* Slightly wider drawer */
+  height: 100%;
+  background: linear-gradient(180deg, #1f2a40, #121212); /* Dark gradient for drawer */
+  border-left: 3px solid #1db954; /* Green accent border */
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  padding: 25px;
+  overflow-y: auto;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother transition */
+  z-index: 1000;
+  color: #eaeaea;
+}
+
+.history-drawer.hidden {
+  transform: translateX(100%); /* Hide drawer off-screen */
+}
+
+.history-drawer h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1db954; /* Green heading */
+  border-bottom: 2px solid #333; /* Subtle separator */
+  padding-bottom: 10px;
+}
+
+.history-list {
+  margin-top: 15px;
+}
+
+.history-list ul {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.08); /* Subtle list item background */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #e0e0e0;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  list-style: none; /* Remove default list styling */
+}
+
+.history-list ul:hover {
+  background: rgba(29, 185, 84, 0.2); /* Green hover effect */
+  color: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(29, 185, 84, 0.3);
+}
+
+.history-list p {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Hide/Show History Button */
+.hide {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1100;
+  padding: 10px 20px;
+  background-color: #333; /* Dark button */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hide:hover {
+  background-color: #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Toastify container styling */
+.Toastify__toast-container--top-right {
+  top: 80px; /* Adjust position to not overlap header */
+  right: 20px;
+}
+
+.Toastify__toast--success {
+  background-color: #1db954 !important; /* Green success */
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336 !important; /* Red error */
+  color: white !important;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.Toastify__close-button--light {
+  color: white !important;
+}
